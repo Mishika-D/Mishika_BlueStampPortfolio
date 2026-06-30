@@ -80,23 +80,20 @@ void loop() {
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/CaCazFBhYKs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
+# Description + Challanges  
 
-
-For your first milestone, describe what your project is and how you plan to build it. You can include:
-- An explanation about the different components of your project and how they will all integrate together
-- Technical progress you've made so far
-- Challenges you're facing and solving in your future milestones
-- What your plan is to complete your project
+My starter project was a retro arcade console. I mainly developed my soldering skills, which I did by carefully soldering the pins an wires. This device runs the game on a 8 X 16 LED pixel grid, while the score is revealed on grid beside it. This console contains 5 games, including space invaders which I show in my video. After soldering all the components, I screwed in the acrylic case, which provides protection to the board and allows the user to hold the console comfortably. Soldering was new to me, therfore I struggled at first. Before staring my project I practiced soldering a few LEDs and resistors, which gave me practice. When soldering my main struggle was making sure the solder went in the exact place I needed. This was partially due to the thickness of the iron I used. I learned how to remove solder too, which was very helpful. While soldering the wires for the battery I encountered an issue where the mini USB was extremly close to where I was supposed to solder. While soldering this part, I had to make sure the hot iron didn't accidentally ruin the mini USB. Overall, I found this experience interesting and I really enjoyed it.  
 
 # Bill of Materials
 Here's where you'll list the parts in your project. To add more rows, just copy and paste the example rows below.
 Don't forget to place the link of where to buy each component inside the quotation marks in the corresponding row after href =. Follow the guide [here]([url](https://www.markdownguide.org/extended-syntax/)) to learn how to customize this to your project needs. 
 
-| **Part** | **Note** | **Price** | **Link** |
-|:--:|:--:|:--:|:--:|
-| Item Name | What the item is used for | $Price | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/"> Link </a> |
-| Item Name | What the item is used for | $Price | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/"> Link </a> |
-| Item Name | What the item is used for | $Price | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/"> Link </a> |
+| Item | Amount | Use |
+| --- | ------- |-----
+| Circut Board | 1 | contains code for games |
+| Buttons | 6 | allows user to control console|
+
+
 
 # Other Resources/Examples
 One of the best parts about Github is that you can view how other people set up their own work. Here are some past BSE portfolios that are awesome examples. You can view how they set up their portfolio, and you can view their index.md files to understand how they implemented different portfolio components.
