@@ -92,6 +92,25 @@ Don't forget to place the link of where to buy each component inside the quotati
 | --- | ------- |-----
 | Circut Board | 1 | contains code for games |
 | Buttons | 6 | allows user to control console|
+| 8x8 LED pixel grid  | 2 | game display |
+| 3 digit display | 1 | score display |
+| Passive buzzer | 1 | used for sound |
+| Capacitor | 1 | stores electric energy |
+| Power swtich + button cap | 1 | controls when power is turned on or off |
+| AAA battery | 3 | power source |
+| AAA battery case | 1 | directs power to board and contains batteries |
+| Screws | 10 | helps attach acrylic case to board |
+| Isolation pillars (copper) | 4 | spaces out acrylic plate from board |
+| Isolation pillars (isolation) | 4 | spaces out acrylic plate from board |
+| Acrylic main panels | 2 | protects components |
+| Acrylic side panels | 4 | protects components + joins main panels |
+
+
+
+
+
+
+
 
 
 
