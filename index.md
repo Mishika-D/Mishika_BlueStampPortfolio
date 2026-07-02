@@ -9,7 +9,7 @@ You should comment out all portions of your portfolio that you have not complete
 
 | **Engineer** | **School** | **Area of Interest** | **Grade** |
 |:--:|:--:|:--:|:--:|
-| Mishika D | Cupertino Highschool  | Bioengineering | Incoming Freshman
+| Mishika D | Cupertino Highschool  | Biomedical Engineering | Incoming Freshman
 
 **Replace the BlueStamp logo below with an image of yourself and your completed project. Follow the guide [here](https://tomcam.github.io/least-github-pages/adding-images-github-pages-site.html) if you need help.**
 
@@ -47,13 +47,14 @@ For your second milestone, explain what you've worked on since your previous mil
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/CaCazFBhYKs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
+# Description 
+Completing the build of my robot was my first milestone. Before starting the assembly of the robot, all servos needed to be set to 90 degrees. This is done by uploading code to the robot which states what pins the servos are located on and sets the servos to 90 degrees. Without setting them, the position of your servos is unknown. This means when you assemble the robot, it won't have its full range of motion. This robot utilizes 1 servo beneath the base of the robot to rotate the arm. This servo is located inbetween the turntable, which is used to support the base which the arm stands on. Two servos are located in the middle of the arm, they control how far forward and backwards the arm moves. The last servo is located at the top of the arm and it moves one side of the claw up and down. The gear of this side of the claw is in contact with the other gear of the other claw, thus moving both sides while only utilizing one servo. 
 
+# Challenges 
+I overcame many challeges during this assembly. For example, while building my robot I didn't set my servos. At this point I had already attached 3 out of the 4 servos and I ended up having to deconstruct a lot of my robotic arm. While this was tedious, it got me familiar with the robot. Keeping track of parts was also important. The screws used for the servos were extremely small, and so I had to make sure to not accidentally loose any. To add on, I didn't have acess to the lithiumn batteries necessary to power to robot. Instead I used a single 9V battery as the power source. Also, some of the screws were located in awkward places, and so it was hard to properly attach some parts. An example of this was one side of the claw (the side not attached to the servo). I had to add 2 bearings, my claw, and three washers through the screw before using a nut at the end to secure it. 
 
-For your first milestone, describe what your project is and how you plan to build it. You can include:
-- An explanation about the different components of your project and how they will all integrate together
-- Technical progress you've made so far
-- Challenges you're facing and solving in your future milestones
-- What your plan is to complete your project
+# Whats next?
+For my next milestone, I am aiming to complete my modifications. My main modification is to add LEDs which light up based on the movement of the robot. If I have extra time, I will CAD a case for my controller using Onshape. 
 
 # Schematics 
 Here's where you'll put images of your schematics. [Tinkercad](https://www.tinkercad.com/blog/official-guide-to-tinkercad-circuits) and [Fritzing](https://fritzing.org/learning/) are both great resoruces to create professional schematic diagrams, though BSE recommends Tinkercad becuase it can be done easily and for free in the browser. 
@@ -80,13 +81,11 @@ void loop() {
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/CaCazFBhYKs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-# Description + Challanges  
+# Description + Challanges + Next step  
 
-My starter project was a retro arcade console. I mainly developed my soldering skills, which I did by carefully soldering the pins an wires. This device runs the game on a 8 X 16 LED pixel grid, while the score is revealed on grid beside it. This console contains 5 games, including space invaders which I show in my video. After soldering all the components, I screwed in the acrylic case, which provides protection to the board and allows the user to hold the console comfortably. Soldering was new to me, therfore I struggled at first. Before staring my project I practiced soldering a few LEDs and resistors, which gave me practice. When soldering my main struggle was making sure the solder went in the exact place I needed. This was partially due to the thickness of the iron I used. I learned how to remove solder too, which was very helpful. While soldering the wires for the battery I encountered an issue where the mini USB was extremly close to where I was supposed to solder. While soldering this part, I had to make sure the hot iron didn't accidentally ruin the mini USB. Overall, I found this experience interesting and I really enjoyed it.  
+My starter project was a retro arcade console. I mainly developed my soldering skills, which I did by carefully soldering the pins an wires. This device runs the game on a 8 X 16 LED pixel grid, while the score is revealed on grid beside it. This console contains 5 games, including space invaders which I show in my video. After soldering all the components, I screwed in the acrylic case, which provides protection to the board and allows the user to hold the console comfortably. Soldering was new to me, therfore I struggled at first. Before staring my project I practiced and learned how to solder LEDs and resistors. When soldering, my main struggle was making sure the solder went in the exact place I needed. This was partially due to the thickness of the iron I used. I learned how to remove solder too, which was very helpful. While soldering the wires for the battery I encountered an issue where the mini USB was extremly close to where I was supposed to solder. While soldering this part, I had to make sure the hot iron didn't accidentally damage the mini USB. Overall, I found this experience interesting and I really enjoyed it. My next step is to start my intensive project. 
 
 # Bill of Materials
-Here's where you'll list the parts in your project. To add more rows, just copy and paste the example rows below.
-Don't forget to place the link of where to buy each component inside the quotation marks in the corresponding row after href =. Follow the guide [here]([url](https://www.markdownguide.org/extended-syntax/)) to learn how to customize this to your project needs. 
 
 | Item | Amount | Use |
 | --- | ------- |-----
