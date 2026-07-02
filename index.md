@@ -96,7 +96,7 @@ Don't forget to place the link of where to buy each component inside the quotati
 | 3 digit display | 1 | score display |
 | Passive buzzer | 1 | used for sound |
 | Capacitor | 1 | stores electric energy |
-| Power swtich + button cap | 1 | controls when power is turned on or off |
+| Power swtich + its button cap | 1 | controls when power is turned on or off |
 | AAA battery | 3 | power source |
 | AAA battery case | 1 | directs power to board and contains batteries |
 | Screws | 10 | helps attach acrylic case to board |
