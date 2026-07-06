@@ -39,7 +39,19 @@ For your second milestone, explain what you've worked on since your previous mil
 - Technical details of what you've accomplished and how they contribute to the final goal
 - What has been surprising about the project so far
 - Previous challenges you faced that you overcame
-- What needs to be completed before your final milestone 
+- What needs to be completed before your final milestone
+
+# Description + Challenges 
+
+My second milestone was achieving motion on my robot and completing the wiring. The only wiring required for my robot was for the servos, which I already did to set them to 90 degrees, and the controller. Thus, I finished wiring really fast and decided finish the programming aspect instead of add my modifications. Initially, I decided to have my modifications as the second milestone and have the program as the last. As I worked on the wiring for this milestone, the programming came consecutively which led me to change my plans. I also wanted to apply my modifications by itself as a seperate milestone. The program, which is written in C++, directs the robot to move faster when the joystick moves faster and vice versa. It also goes over the buzzer feature, in which a sound will be made when an action is memorized and when it acts out this recorded action. A problem I faced was that some of the screws holding the servos in place becme loose. This was due to the power of the servos, as the screws given were slightly short. I decided to replace some of these screws with mini zipties since I wouldn't have to worry about any screws coming out. To add on, I found that female-female wires can be used to connect the batteries to the robot. This is a much better idea than soldering since it is not perminent and can easily be removed if necessary.  
+
+# Whats next?
+
+For milestone 3, I want to add my modifications that I thought of when creating my build plan. The modification I want to focus on involves LEDs. Im hoping to add different colors of LEDs around my robot and have certain colors light up when certain actions are preformed. If time permits, I will CAD a case for the controller since it is currently only attached by the wires. 
+
+
+
+
 
 # First Milestone
 
@@ -47,10 +59,8 @@ For your second milestone, explain what you've worked on since your previous mil
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/CaCazFBhYKs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-# Description 
+# Description + Challenges  
 Completing the build of my robot was my first milestone. Before starting the assembly of the robot, all servos needed to be set to 90 degrees. This is done by uploading code to the robot which states what pins the servos are located on and sets the servos to 90 degrees. Without setting them, the position of your servos is unknown. This means when you assemble the robot, it won't have its full range of motion. This robot utilizes 1 servo beneath the base of the robot to rotate the arm. This servo is located inbetween the turntable, which is used to support the base which the arm stands on. Two servos are located in the middle of the arm, they control how far forward and backwards the arm moves. The last servo is located at the top of the arm and it moves one side of the claw up and down. The gear of this side of the claw is in contact with the other gear of the other claw, thus moving both sides while only utilizing one servo. 
-
-# Challenges 
 I overcame many challeges during this assembly. For example, while building my robot I didn't set my servos. At this point I had already attached 3 out of the 4 servos and I ended up having to deconstruct a lot of my robotic arm. While this was tedious, it got me familiar with the robot. Keeping track of parts was also important. The screws used for the servos were extremely small, and so I had to make sure to not accidentally loose any. To add on, I didn't have acess to the lithiumn batteries necessary to power to robot. Instead I used a single 9V battery as the power source. Also, some of the screws were located in awkward places, and so it was hard to properly attach some parts. An example of this was one side of the claw (the side not attached to the servo). I had to add 2 bearings, my claw, and three washers through the screw before using a nut at the end to secure it. 
 
 # Whats next?
