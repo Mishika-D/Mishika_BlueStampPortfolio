@@ -27,7 +27,7 @@ For your final milestone, explain the outcome of your project. Key details to in
 - A summary of key topics you learned about
 - What you hope to learn in the future after everything you've learned at BSE
 
-
+I completed my modifications for my third milestone. I successfully added LEDs to my robot, which turn on based on the robot's movement. I also designed a case to house my breadboards. Using I2C, I got my original nano board to communicate with an additional esp 32, of whos pins are connected to my LEDs. In the beginning, I simmulated how this modification would go using tinkercad. I initially wanted my LEDs to light up based on servo movement, so to mimic that I added a potentiometer (since there was no joystick) and servos along with the LEDs. I also wrote code based on the movement of the servos. When I started the actual build of my modification, I realized it woud be much easier to have my code read the joystick position rather than the servo positon. This is because my original code already reads the position of the joystick, which already correlate to movement on my robot. Also, my previous code was written based on the potentiometer, which meant I had to change aspects of my code at some point. Using my original code made debugging and troubleshooting simpler since I knew it would work with my robot.
 
 # Second Milestone
 
