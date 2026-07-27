@@ -15,7 +15,7 @@ You should comment out all portions of your portfolio that you have not complete
 
 ![Headstone Image](logo.svg)
   
-# Final Milestone
+  # Final Milestone
 
 **Don't forget to replace the text below with the embedding for your milestone video. Go to Youtube, click Share -> Embed, and copy and paste the code to replace what's below.**
 
@@ -27,9 +27,25 @@ For your final milestone, explain the outcome of your project. Key details to in
 - A summary of key topics you learned about
 - What you hope to learn in the future after everything you've learned at BSE
 
-I completed my modifications for my third milestone. I successfully added LEDs to my robot, which turn on based on the robot's movement. I also designed a case to house my breadboards. Using I2C, I got my original nano board to communicate with an additional esp 32, of whos pins are connected to my LEDs. In the beginning, I simmulated how this modification would go using tinkercad. I initially wanted my LEDs to light up based on servo movement, so to mimic that I added a potentiometer (since there was no joystick) and servos along with the LEDs. I also wrote code based on the movement of the servos. When I started the actual build of my modification, I realized it woud be much easier to have my code read the joystick position rather than the servo positon. This is because my original code already reads the position of the joystick, which already correlate to movement on my robot. Also, my previous code was written based on the potentiometer, which meant I had to change aspects of my code at some point. Using my original code made debugging and troubleshooting simpler since I knew it would work with my robot.
+ # Description + Challenges
 
-# Second Milestone
+I completed my modifications for my third milestone. I successfully added LEDs to my robot, which turn on based on the robot's movement. I also designed a case to house my breadboards.
+
+  # I2C
+
+Using I2C, I got my original nano board to communicate with an additional nano esp 32, which currently drives my LEDs. I2C is a common communication protocol that helps transmit data between different devices. I chose to implement I2C because I can easily add more modifications in the future since this mechanism allows for multiple "master" and "slave" devices. Not to mention, this method of communication does not require many wires which adds to it's usefulness. My "master" board was my nano located on my robot. This microcontroller contained code signaling my robot to move and told the LEDs when to light up. My "slave" board was my nano esp 32, which light-up my LEDs.
+
+  # Planning my modification 
+
+In the beginning, I simmulated how this modification would go using tinkercad. I initially wanted my LEDs to light up based on servo movement, so to mimic that I added a potentiometer (since there was no joystick) and servos along with the LEDs. I also wrote code based on the movement of the servos. During this process I learned how current flows through breadboards and applied it to my LEDs. Since this was just a simmulation, I was able to test how LEDs would react when I changed their ressistance and location on the breadboard. During this time I learned the difference between wiring circuts in series vs parallel.  
+
+  # Building my modification
+
+When I started the actual build of my modification, I realized it woud be much easier to have my code read the joystick position rather than the servo positon. This is because my original code already reads the position of the joystick, which correlate to movement on my robot. Also, my previous code was written based on the potentiometer, which meant I had to change aspects of my code at some point, which would take time away from my build. Using my original code made debugging and troubleshooting simpler since I knew how it would react alongside my robot. I also changed some of the wiring when attaching my LEDs to my breadboard. For example, due to the ammount of wires, I changed the location of some of the LEDs for convenience. I also found that wiring in series sometimes would not work. While it worked on my simmulation, sometimes wiring more than 1 LED in series caused too much ressistance and it wouldn't light up. Learning how power flows through bread boards was really important too, especially since the top half of the breadboard does not automatically get power even when the botton half does.  
+
+# Whats next?
+
+  # Second Milestone
 
 **Don't forget to replace the text below with the embedding for your milestone video. Go to Youtube, click Share -> Embed, and copy and paste the code to replace what's below.**
 
@@ -53,7 +69,7 @@ For milestone 3, I want to add my modifications that I thought of when creating 
 
 
 
-# First Milestone
+  # First Milestone
 
 **Don't forget to replace the text below with the embedding for your milestone video. Go to Youtube, click Share -> Embed, and copy and paste the code to replace what's below.**
 
