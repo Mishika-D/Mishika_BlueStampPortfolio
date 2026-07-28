@@ -1,5 +1,6 @@
 # Project Name Here
-Replace this text with a brief description (2-3 sentences) of your project. This description should draw the reader in and make them interested in what you've built. You can include what the biggest challenges, takeaways, and triumphs from completing the project were. As you complete your portfolio, remember your audience is less familiar than you are with all that your project entails!
+
+My light-up robotic arm contains different colors for each part. Each color lights up based on the movement of the robot. The turntable lights up blue, the arm lights up green, and the claw lights up red. The robot operates using I2C, which allows my nano board to communicate with my nano esp 32 board. My nano esp 32 receives information from my nano, which tells it to light up LEDs based on movement of the robot. The LEDs light up based on the motion detected on the joystick.
 
 You should comment out all portions of your portfolio that you have not completed yet, as well as any instructions:
 ```HTML 
@@ -32,15 +33,11 @@ I completed my modifications for my third milestone. I successfully added LEDs t
 
   # Planning my modification 
 
-In the beginning, I simmulated how this modification would go using tinkercad. I initially wanted my LEDs to light up based on servo movement, so to mimic that I added a potentiometer (since there was no joystick) and servos along with the LEDs. I also wrote code based on the movement of the servos. During this process I learned how current flows through breadboards and applied it to my LEDs. Since this was just a simmulation, I was able to test how LEDs would react when I changed their ressistance and location on the breadboard. During this time I learned the difference between wiring circuts in series vs parallel.  
+In the beginning, I simulated how this modification would go using tinkercad. I initially wanted my LEDs to light up based on servo movement, so to mimic that I added a potentiometer (since there was no joystick) and servos along with the LEDs. I also wrote code based on the movement of the servos. During this process I learned how current flows through breadboards and applied it to my LEDs. Since this was just a simulation, I was able to test how LEDs would react when I changed their resistance and location on the breadboard. During this time I learned the difference between wiring circuits in series vs parallel.  
 
   # Building my modification
 
-When I started the actual build of my modification, I realized it woud be much easier to have my code read the joystick position rather than the servo positon. This is because my original code already reads the position of the joystick, which correlate to movement on my robot. Also, my previous code was written based on the potentiometer, which meant I had to change aspects of my code at some point, which would take time away from my build. Using my original code made debugging and troubleshooting simpler since I knew how it would react alongside my robot. I also changed some of the wiring when attaching my LEDs to my breadboard. For example, due to the ammount of wires, I changed the location of some of the LEDs for convenience. Learning how power flows through bread boards was really important too, especially since the top half of the breadboard does not automatically get power even when the botton half does. 
-
-# Challenges 
-
-This part of my project had many challenges. To start off, my code had a deadzone which said that if the value on the joystick was not 512 (center), then the robot can move. When I added my LEDs, I found that the deadzone value had changed. This caused my LEDs to blink rapidly rather than stay still. I overcame this by writing debug code and adding a range of values rather than a specific number. I also found that wiring in series sometimes would not work. While it worked on my simmulation, sometimes wiring more than 1 LED in series caused too much ressistance and it wouldn't light up. I faced an issue with the wiring too. When wiring the power line from the top and bottom of the breadboard, I accidentally wired power to ground rather than power to power and ground to ground. I realized this when my robot froze when it was supposed to be in motion. Attaching my LEDs to my robot was a challange due to the amount of wires I needed. Each LED needed 2 jumper wires and I had to double the lenghth (the wires has to be long since the LEDs had to reach the robot). In the future I aim to make a case for my robot so the wires are protected. 
+When I started the actual build of my modification, I realized it would be much easier to have my code read the joystick position rather than the servo position. This is because my original code already reads the position of the joystick, which correlate to movement on my robot. Also, my previous code was written based on the potentiometer, which meant I had to change aspects of my code at some point, which would take time away from my build. Using my original code made debugging and troubleshooting simpler since I knew how it would react alongside my robot. I also changed some of the wiring when attaching my LEDs to my breadboard. For example, due to the amount of wires, I changed the location of some of the LEDs for convenience. Learning how power flows through bread boards was really important too, especially since the top half of the breadboard does not automatically get power even when the bottom half does. 
 
 # Key topics I Learned 
 
@@ -50,10 +47,15 @@ Using I2C, I got my original nano board to communicate with an additional nano e
 
 # Programming 
 
-Most of the challenges I faced lied in the program of the robot. Like I mentioned before, my LEDs would blink when they were not supposed to. While fixing this issue I learned how to write debug code and use the serial moniter. This was incredibly helpful since most of the issues I faced weren't directly written in the code. By writing debug code, I was able to read outputs from the serial moniter and fix my issues. 
+Most of the challenges I faced lied in the program of the robot. Like I mentioned before, my LEDs would blink when they were not supposed to. While fixing this issue I learned how to write debug code and use the serial monitor. This was incredibly helpful since most of the issues I faced weren't directly written in the code. By writing debug code, I was able to read outputs from the serial monitor and fix my issues. 
 
 
-# Future 
+# Challenges 
+
+This part of my project had many challenges. To start off, my code had a dead zone which said that if the value on the joystick was not 512 (center), then the robot can move. When I added my LEDs, I found that the dead zone value had changed. This caused my LEDs to blink rapidly rather than stay still. I overcame this by writing debug code and adding a range of values rather than a specific number. I also found that wiring in series sometimes would not work. While it worked on my simulation, sometimes wiring more than 1 LED in series caused too much resistance and it wouldn't light up. I faced an issue with the wiring too. When wiring the power line from the top and bottom of the breadboard, I accidentally wired power to ground rather than power to power and ground to ground. I realized this when my robot froze when it was supposed to be in motion. Attaching my LEDs to my robot was a challenge due to the amount of wires I needed. Each LED needed 2 jumper wires and I had to double the length (the wires has to be long since the LEDs had to reach the robot). In the future I aim to make a case for my robot so the wires are protected. I enjoyed constructing and designing this project and I am eager to see what projects I will work on in the future. 
+
+
+
 
   # Second Milestone
 
