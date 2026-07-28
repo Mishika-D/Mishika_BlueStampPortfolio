@@ -27,13 +27,8 @@ For your final milestone, explain the outcome of your project. Key details to in
 - A summary of key topics you learned about
 - What you hope to learn in the future after everything you've learned at BSE
 
- # Description + Challenges
-
+ # Description
 I completed my modifications for my third milestone. I successfully added LEDs to my robot, which turn on based on the robot's movement. I also designed a case to house my breadboards.
-
-  # I2C
-
-Using I2C, I got my original nano board to communicate with an additional nano esp 32, which currently drives my LEDs. I2C is a common communication protocol that helps transmit data between different devices. I chose to implement I2C because I can easily add more modifications in the future since this mechanism allows for multiple "master" and "slave" devices. Not to mention, this method of communication does not require many wires which adds to it's usefulness. My "master" board was my nano located on my robot. This microcontroller contained code signaling my robot to move and told the LEDs when to light up. My "slave" board was my nano esp 32, which light-up my LEDs.
 
   # Planning my modification 
 
@@ -41,9 +36,24 @@ In the beginning, I simmulated how this modification would go using tinkercad. I
 
   # Building my modification
 
-When I started the actual build of my modification, I realized it woud be much easier to have my code read the joystick position rather than the servo positon. This is because my original code already reads the position of the joystick, which correlate to movement on my robot. Also, my previous code was written based on the potentiometer, which meant I had to change aspects of my code at some point, which would take time away from my build. Using my original code made debugging and troubleshooting simpler since I knew how it would react alongside my robot. I also changed some of the wiring when attaching my LEDs to my breadboard. For example, due to the ammount of wires, I changed the location of some of the LEDs for convenience. I also found that wiring in series sometimes would not work. While it worked on my simmulation, sometimes wiring more than 1 LED in series caused too much ressistance and it wouldn't light up. Learning how power flows through bread boards was really important too, especially since the top half of the breadboard does not automatically get power even when the botton half does.  
+When I started the actual build of my modification, I realized it woud be much easier to have my code read the joystick position rather than the servo positon. This is because my original code already reads the position of the joystick, which correlate to movement on my robot. Also, my previous code was written based on the potentiometer, which meant I had to change aspects of my code at some point, which would take time away from my build. Using my original code made debugging and troubleshooting simpler since I knew how it would react alongside my robot. I also changed some of the wiring when attaching my LEDs to my breadboard. For example, due to the ammount of wires, I changed the location of some of the LEDs for convenience. Learning how power flows through bread boards was really important too, especially since the top half of the breadboard does not automatically get power even when the botton half does. 
 
-# Whats next?
+# Challenges 
+
+This part of my project had many challenges. To start off, my code had a deadzone which said that if the value on the joystick was not 512 (center), then the robot can move. When I added my LEDs, I found that the deadzone value had changed. This caused my LEDs to blink rapidly rather than stay still. I overcame this by writing debug code and adding a range of values rather than a specific number. I also found that wiring in series sometimes would not work. While it worked on my simmulation, sometimes wiring more than 1 LED in series caused too much ressistance and it wouldn't light up. I faced an issue with the wiring too. When wiring the power line from the top and bottom of the breadboard, I accidentally wired power to ground rather than power to power and ground to ground. I realized this when my robot froze when it was supposed to be in motion. Attaching my LEDs to my robot was a challange due to the amount of wires I needed. Each LED needed 2 jumper wires and I had to double the lenghth (the wires has to be long since the LEDs had to reach the robot). In the future I aim to make a case for my robot so the wires are protected. 
+
+# Key topics I Learned 
+
+  # I2C
+
+Using I2C, I got my original nano board to communicate with an additional nano esp 32, which currently drives my LEDs. I2C is a common communication protocol that helps transmit data between different devices. I chose to implement I2C because I can easily add more modifications in the future since this mechanism allows for multiple "master" and "slave" devices. Not to mention, this method of communication does not require many wires which adds to it's usefulness. My "master" board was my nano located on my robot. This microcontroller contained code signaling my robot to move and told the LEDs when to light up. My "slave" board was my nano esp 32, which light-up my LEDs.
+
+# Programming 
+
+Most of the challenges I faced lied in the program of the robot. Like I mentioned before, my LEDs would blink when they were not supposed to. While fixing this issue I learned how to write debug code and use the serial moniter. This was incredibly helpful since most of the issues I faced weren't directly written in the code. By writing debug code, I was able to read outputs from the serial moniter and fix my issues. 
+
+
+# Future 
 
   # Second Milestone
 
