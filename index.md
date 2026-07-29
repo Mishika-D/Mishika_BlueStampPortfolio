@@ -13,6 +13,9 @@ My vibrant light-up robotic arm glows different colors for each segment of my ro
 # Final Milestone
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ZKKGAXcAkhQ?si=GAgxgriwa98hc6Mu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
+<img width="318" height="416" alt="Screenshot 2026-07-29 143711" src="https://github.com/user-attachments/assets/7e910cc6-974f-452b-907e-2475c6b17943" />
+
+
 # Description
 I completed my modifications for my third milestone. I successfully added LEDs to my robot, which turn on based on the robot's movement. I also designed a case to house my breadboards.
 In the beginning, I simulated how this modification would go using tinker cad. I initially wanted my LEDs to light up based on servo movement, so to mimic that I added a potentiometer (since there was no joystick) and servos along with the LEDs. I also wrote code based on the movement of the servos. During this process I learned how current flows through breadboards and applied it to my LEDs. Since this was just a simulation, I was able to test how LEDs would react when I changed their resistance and location on the breadboard. During this time I learned the difference between wiring circuits in series vs parallel.  
