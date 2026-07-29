@@ -6,8 +6,6 @@ My vibrant light-up robotic arm glows different colors for each segment of my ro
 |:--:|:--:|:--:|:--:|
 | Mishika D | Cupertino Highschool  | Bio/Biomedical Engineering | Incoming Freshman
 
-**Replace the BlueStamp logo below with an image of yourself and your completed project. Follow the guide [here](https://tomcam.github.io/least-github-pages/adding-images-github-pages-site.html) if you need help.**
-
 <img width="4284" height="5712" alt="Mishika D (1)" src="https://github.com/user-attachments/assets/afb5e058-c2c0-4dfc-85a7-f30a98fcd43d" />
 
   
