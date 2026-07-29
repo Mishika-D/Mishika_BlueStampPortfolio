@@ -61,6 +61,9 @@ For my next milestone, I am aiming to complete my modifications. My main modific
 # Schematics 
 Here's where you'll put images of your schematics. [Tinkercad](https://www.tinkercad.com/blog/official-guide-to-tinkercad-circuits) and [Fritzing](https://fritzing.org/learning/) are both great resoruces to create professional schematic diagrams, though BSE recommends Tinkercad because it can be done easily and for free in the browser. 
 
+<img width="374" height="281" alt="Screenshot 2026-07-29 141919" src="https://github.com/user-attachments/assets/11050481-b595-4bfa-b8cc-49fa19d4aa63" />
+
+
 # Code
 Here's where you'll put your code. The syntax below places it into a block of code. Follow the guide [here]([url](https://www.markdownguide.org/extended-syntax/)) to learn how to customize it to your project needs. 
 
