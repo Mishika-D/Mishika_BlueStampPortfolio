@@ -2,12 +2,6 @@
 
 My vibrant light-up robotic arm glows different colors for each segment of my robot. Each color lights up based on the movement of the arm. The turntable lights up blue, the arm lights up green, and the claw lights up red. The robot operates using I2C, which allows my nano board to communicate with my nano esp 32 board. My nano esp 32 receives information from my nano, which tells it to light up LEDs based on movement of the robot.
 
-You should comment out all portions of your portfolio that you have not completed yet, as well as any instructions:
-```HTML 
-<!--- This is an HTML comment in Markdown -->
-<!--- Anything between these symbols will not render on the published site -->
-```
-
 | **Engineer** | **School** | **Area of Interest** | **Grade** |
 |:--:|:--:|:--:|:--:|
 | Mishika D | Cupertino Highschool  | Bio/Biomedical Engineering | Incoming Freshman
@@ -33,7 +27,7 @@ This part of my project had many challenges. To start off, my code had a dead zo
 
 
 
- # Second Milestone 
+# Second Milestone
 <iframe width="560" height="315" src="https://www.youtube.com/embed/FrV4J9Y4CQE?si=83UWknsjZBa5xKt_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
@@ -47,7 +41,7 @@ For milestone 3, I want to add my modifications that I thought of when creating 
 
 
 
-  # First Milestone
+# First Milestone
 <iframe width="560" height="315" src="https://www.youtube.com/embed/MZYBzXjo5vc?si=ej4jDvrsS-FzDc1A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
