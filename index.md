@@ -62,6 +62,7 @@ For my next milestone, I am aiming to complete my modifications. My main modific
 
 <img width="774" height="599" alt="Screenshot 2026-07-29 142712" src="https://github.com/user-attachments/assets/87233872-78c3-4135-af19-5a14ad4e096c" />
 
+<img width="759" height="518" alt="Screenshot 2026-07-29 150332" src="https://github.com/user-attachments/assets/2f3419ee-c32d-437d-8c19-39643d059ea1" />
 
 
 
