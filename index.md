@@ -104,20 +104,3 @@ My starter project was a retro arcade console. I mainly developed my soldering s
 | Isolation pillars (isolation) | 4 | spaces out acrylic plate from board |
 | Acrylic main panels | 2 | protects components |
 | Acrylic side panels | 4 | protects components + joins main panels |
-
-
-
-
-
-
-
-
-
-
-# Other Resources/Examples
-One of the best parts about Github is that you can view how other people set up their own work. Here are some past BSE portfolios that are awesome examples. You can view how they set up their portfolio, and you can view their index.md files to understand how they implemented different portfolio components.
-- [Example 1](https://trashytuber.github.io/YimingJiaBlueStamp/)
-- [Example 2](https://sviatil0.github.io/Sviatoslav_BSE/)
-- [Example 3](https://arneshkumar.github.io/arneshbluestamp/)
-
-To watch the BSE tutorial on how to create a portfolio, click here.
