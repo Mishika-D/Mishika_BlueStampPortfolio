@@ -16,7 +16,7 @@ You should comment out all portions of your portfolio that you have not complete
 
 ![Headstone Image](logo.svg)
   
-  # Final Milestone
+# Final Milestone
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ZKKGAXcAkhQ?si=GAgxgriwa98hc6Mu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 # Description
@@ -33,7 +33,7 @@ This part of my project had many challenges. To start off, my code had a dead zo
 
 
 
-  # Second Milestone
+ # Second Milestone 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/FrV4J9Y4CQE?si=83UWknsjZBa5xKt_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
@@ -59,8 +59,6 @@ I overcame many challenges during this assembly. For example, while building my 
 For my next milestone, I am aiming to complete my modifications. My main modification is to add LEDs which light up based on the movement of the robot. If I have extra time, I will CAD a case for my controller using Onshape. 
 
 # Schematics 
-Here's where you'll put images of your schematics. [Tinkercad](https://www.tinkercad.com/blog/official-guide-to-tinkercad-circuits) and [Fritzing](https://fritzing.org/learning/) are both great resoruces to create professional schematic diagrams, though BSE recommends Tinkercad because it can be done easily and for free in the browser. 
-
 <img width="822" height="640" alt="Screenshot 2026-07-29 142229" src="https://github.com/user-attachments/assets/dfc0fee4-81ae-4fa1-9e74-b42b6e405eaa" />
 <img width="824" height="628" alt="Screenshot 2026-07-29 142514" src="https://github.com/user-attachments/assets/a4f8c52b-b001-40f2-81f6-42cdf8c29703" />
 
@@ -87,8 +85,6 @@ void loop() {
 ```
 
 # Starter Project 
-
-**Don't forget to replace the text below with the embedding for your milestone video. Go to Youtube, click Share -> Embed, and copy and paste the code to replace what's below.**
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Ep7Yl2C_bmo?si=GeC7OTY-ftHB_Cp9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
