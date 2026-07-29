@@ -62,6 +62,11 @@ For my next milestone, I am aiming to complete my modifications. My main modific
 Here's where you'll put images of your schematics. [Tinkercad](https://www.tinkercad.com/blog/official-guide-to-tinkercad-circuits) and [Fritzing](https://fritzing.org/learning/) are both great resoruces to create professional schematic diagrams, though BSE recommends Tinkercad because it can be done easily and for free in the browser. 
 
 <img width="822" height="640" alt="Screenshot 2026-07-29 142229" src="https://github.com/user-attachments/assets/dfc0fee4-81ae-4fa1-9e74-b42b6e405eaa" />
+<img width="824" height="628" alt="Screenshot 2026-07-29 142514" src="https://github.com/user-attachments/assets/a4f8c52b-b001-40f2-81f6-42cdf8c29703" />
+
+<img width="774" height="599" alt="Screenshot 2026-07-29 142712" src="https://github.com/user-attachments/assets/87233872-78c3-4135-af19-5a14ad4e096c" />
+
+
 
 
 
