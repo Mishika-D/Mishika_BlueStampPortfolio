@@ -6,7 +6,7 @@ My vibrant light-up robotic arm glows different colors for each segment of my ro
 |:--:|:--:|:--:|:--:|
 | Mishika D | Cupertino Highschool  | Bio/Biomedical Engineering | Incoming Freshman
 
-![Headstone Image] (logo.svg) 
+![Headstone Image](logo.svg) 
 
   
 # Final Milestone
