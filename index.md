@@ -8,7 +8,8 @@ My vibrant light-up robotic arm glows different colors for each segment of my ro
 
 **Replace the BlueStamp logo below with an image of yourself and your completed project. Follow the guide [here](https://tomcam.github.io/least-github-pages/adding-images-github-pages-site.html) if you need help.**
 
-![Headstone Image](logo.svg)
+![Headstone Image](<img width="4284" height="5712" alt="Mishika D (1)" src="https://github.com/user-attachments/assets/f27fc76e-294e-4e71-ac86-5f313cbd3a3c" />
+)
   
 # Final Milestone
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ZKKGAXcAkhQ?si=GAgxgriwa98hc6Mu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
