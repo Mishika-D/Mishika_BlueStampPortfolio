@@ -86,7 +86,7 @@ void loop() {
 
 My starter project was a retro arcade console. I mainly developed my soldering skills, which I did by carefully soldering the pins an wires. This device runs the game on a 8 X 16 LED pixel grid, while the score is revealed on grid beside it. This console contains 5 games, including space invaders which I show in my video. After soldering all the components, I screwed in the acrylic case, which provides protection to the board and allows the user to hold the console comfortably. Soldering was new to me and I struggled at first. Before staring my project I practiced and learned how to solder LEDs and resistors. When soldering, my main struggle was making sure the solder went in the exact place I needed. This was partially due to the thickness of the iron I used. I learned how to remove solder too, which was very helpful. While soldering the wires for the battery I encountered an issue where the mini USB was extremly close to where I was supposed to solder. While soldering this part, I had to make sure the hot iron didn't accidentally damage the mini USB. Overall, I found this experience interesting and I really enjoyed it. My next step is to start my intensive project. 
 
-# Bill of Materials
+# Starter Project Bill of Materials
 
 | Item | Amount | Use |
 | --- | ------- |-----
