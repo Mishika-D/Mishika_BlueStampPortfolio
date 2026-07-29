@@ -22,6 +22,7 @@ You should comment out all portions of your portfolio that you have not complete
 
  # Description
  
+ 
 I completed my modifications for my third milestone. I successfully added LEDs to my robot, which turn on based on the robot's movement. I also designed a case to house my breadboards.
 In the beginning, I simulated how this modification would go using tinker cad. I initially wanted my LEDs to light up based on servo movement, so to mimic that I added a potentiometer (since there was no joystick) and servos along with the LEDs. I also wrote code based on the movement of the servos. During this process I learned how current flows through breadboards and applied it to my LEDs. Since this was just a simulation, I was able to test how LEDs would react when I changed their resistance and location on the breadboard. During this time I learned the difference between wiring circuits in series vs parallel.  
 When I started the actual build of my modification, I realized it would be much easier to have my code read the joystick position rather than the servo position. This is because my original code already reads the position of the joystick, which correlate to movement on my robot. Also, my previous code was written based on the potentiometer, which meant I had to change aspects of my code at some point, which would take time away from my build. Using my original code made debugging and troubleshooting simpler since I knew how it would react alongside my robot. I also changed some of the wiring when attaching my LEDs to my breadboard. For example, due to the amount of wires, I changed the location of some of the LEDs for convenience. Learning how power flows through bread boards was really important too, especially since the top half of the breadboard does not automatically get power even when the bottom half does. 
@@ -31,6 +32,7 @@ Most of the challenges I faced lied in the program of the robot. Like I mentione
 
 # Challenges 
 
+
 This part of my project had many challenges. To start off, my code had a dead zone which stated that if the value on the joystick was not 512 (center), then the robot can move. When I added my LEDs, I found that the dead zone value had changed. This caused my LEDs to blink rapidly rather than stay still. I overcame this by writing debug code and adding a range of values rather than a specific number. I also found that wiring in series sometimes would not work. While it worked on my simulation, sometimes wiring more than 1 LED in series caused too much resistance and it wouldn't light up. I faced an issue with the wiring too. When wiring the power line from the top and bottom of the breadboard, I accidentally wired power to ground rather than power to power and ground to ground. I realized this when my robot froze when it was supposed to be in motion. Attaching my LEDs to my robot was a challenge due to the amount of wires I needed. Each LED needed 2 jumper wires and I had to double the length (the wires has to be long since the LEDs had to reach the robot). In the future I aim to make a case for my robot so the wires are protected. I enjoyed constructing and designing this project and I am eager to see what projects I will work on in the future. 
 
 
@@ -38,14 +40,17 @@ This part of my project had many challenges. To start off, my code had a dead zo
 
   # Second Milestone
 
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/FrV4J9Y4CQE?si=83UWknsjZBa5xKt_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
 # Description + Challenges 
 
+
 My second milestone was achieving motion on my robot and completing the wiring. The only wiring required for my robot was for the servos, which I already did to set them to 90 degrees, and the controller. Thus, I finished wiring really fast and decided finish the programming aspect instead of add my modifications. Initially, I decided to have my modifications as the second milestone and have the program as the last. As I worked on the wiring for this milestone, the programming came consecutively which led me to change my plans. I also wanted to apply my modifications by itself as a separet milestone. The program, which is written in C++, directs the robot to move faster when the joystick moves faster and vice versa. It also goes over the buzzer feature, in which a sound will be made when an action is memorized and when it acts out this recorded action. A problem I faced was that some of the screws holding the servos in place becme loose. This was due to the power of the servos, as the screws given were slightly short. I decided to replace some of these screws with mini zip ties since I wouldn't have to worry about any screws coming out. To add on, I found that female-female wires can be used to connect the batteries to the robot. This is a much better idea than soldering since it is not permanent and can easily be removed if necessary.  
 
 # Whats next?
+
 
 For milestone 3, I want to add my modifications that I thought of when creating my build plan. The modification I want to focus on involves LEDs. I am hoping to add different colors of LEDs around my robot and have certain colors light up when certain actions are preformed. If time permits, I will CAD a case for the controller since it is currently only attached by the wires. 
 
@@ -55,14 +60,19 @@ For milestone 3, I want to add my modifications that I thought of when creating 
 
   # First Milestone
 
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/MZYBzXjo5vc?si=ej4jDvrsS-FzDc1A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
-# Description + Challenges  
+# Description + Challenges
+
+
 Completing the build of my robot was my first milestone. Before starting the assembly of the robot, all servos needed to be set to 90 degrees. This is done by uploading code to the robot which states what pins the servos are located on and sets the servos to 90 degrees. Without setting them, the position of your servos is unknown. This means when you assemble the robot, it won't have its full range of motion. This robot utilizes 1 servo beneath the base of the robot to rotate the arm. This servo is located in between the turntable, which is used to support the base which the arm stands on. Two servos are located in the middle of the arm, they control how far forward and backwards the arm moves. The last servo is located at the top of the arm and it moves one side of the claw up and down. The gear of this side of the claw is in contact with the other gear of the other claw, thus moving both sides while only utilizing one servo. 
 I overcame many challenges during this assembly. For example, while building my robot I didn't set my servos. At this point I had already attached 3 out of the 4 servos and I ended up having to deconstruct a lot of my robotic arm. While this was tedious, it got me familiar with the robot. Keeping track of parts was also important. The screws used for the servos were extremely small, and so I had to make sure to not accidentally loose any. To add on, I didn't have acess to the lithium batteries necessary to power to robot. Instead I used a single 9V battery as the power source. Also, some of the screws were located in awkward places, and so it was hard to properly attach some parts. An example of this was one side of the claw (the side not attached to the servo). I had to add 2 bearings, my claw, and three washers through the screw before using a nut at the end to secure it. 
 
 # Whats next?
+
+
 For my next milestone, I am aiming to complete my modifications. My main modification is to add LEDs which light up based on the movement of the robot. If I have extra time, I will CAD a case for my controller using Onshape. 
 
 # Schematics 
