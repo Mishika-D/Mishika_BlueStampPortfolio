@@ -1,3 +1,4 @@
+![Uploading Mishika D.jpg…]()
 # Light-Up Robotic Arm
 
 My vibrant light-up robotic arm glows different colors for each segment of my robot. Each color lights up based on the movement of the arm. The turntable lights up blue, the arm lights up green, and the claw lights up red. The robot operates using I2C, which allows my nano board to communicate with my nano esp 32 board. My nano esp 32 receives information from my nano, which tells it to light up LEDs based on movement of the robot.
