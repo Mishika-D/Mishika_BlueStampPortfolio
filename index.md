@@ -69,82 +69,163 @@ For my next milestone, I am aiming to complete my modifications. My main modific
 Here's where you'll put your code. The syntax below places it into a block of code. Follow the guide [here]([url](https://www.markdownguide.org/extended-syntax/)) to learn how to customize it to your project needs. 
 
 ```c++
-// I2C Slave
+// I2C Master
 
 
-// include the required Wire library for I2C
-#include <Wire.h>`
-
-// define booleans, which are received via I2C.
-// these booleans will determine whether to turn on the respective color of LEDs
-bool openRed; 
-bool openGreen;
-bool openBlue;
-
-const int LED_PIN = 13;
+// IMPORTS
+#include <Wire.h> // the required Wire Library for I2C
+#include "src/CokoinoArm.h" // the required CokoinoArm class
 
 
-void setup () {
-  // define the LED pin as Output
-  pinMode (LED_PIN, OUTPUT);
-  // start the I2C Bus as Slave on address 9
-  Wire.begin(9);
-  Serial.begin(9600); 
-  // attach a function to trigger when something is received.
-  Wire.onReceive(receiveEvent);
+// define booleans to be sent over I2C
+bool isRed; // should the red LED be on?
+bool isGreen; // should the green LED be on?
+bool isBlue; // should the blue LED be on?
 
-  // deifne pins
-  pinMode(11, OUTPUT); // green
-  pinMode(8, OUTPUT); // blue
-  pinMode(2, OUTPUT);  // green
-  pinMode(7, OUTPUT);  // red
-  pinMode(10, OUTPUT); // green
-  pinMode(12, OUTPUT); // blue
-  pinMode(3, OUTPUT); // red
+// this is where I create my arm class, and I call it arm. 
+CokoinoArm arm;
+
+// define input strength variables
+// xL is movement of the left joystick along the x-axis
+// yL is movement of the left joystick along the y-axis
+// xR is movement of the right joystick along the x-axis
+// yR is movement of the right joystick along the y-axis
+int xL, yL, xR, yR;
+
+
+void setup() {
+  Serial.begin(9600); // begin serial communication at 9600 baud
+  // start the I2C Bus as Master
+  Wire.begin();
+  //arm of servo motor connection pins
+  arm.ServoAttach(4,5,6,7);
+  //arm of joy stick connection pins : xL,yL,xR,yR
+  arm.JoyStickAttach(A0,A1,A2,A3);
 }
 
-// updates the RGB variables based on the received data.
-// assumes the triplet is sent in the same RGB format.
-void receiveEvent(int bytes) {
-  if (bytes >= 3) { // ensures we recieved 3 or more data bytes so there is enough to assign to the bools.
-    openRed = Wire.read();
-    openGreen = Wire.read();
-    openBlue = Wire.read();
-  }
-}
 
 void loop() {
-  // openRed is a bool, so it is already either true or false.
-  if (openRed) { // does the red LEDs need to be on?
-    digitalWrite(3, HIGH);
-    digitalWrite(7, HIGH);
-  } else { // otherwise, turn them off.
-    digitalWrite(3, LOW);
-    digitalWrite(7, LOW);
-  }
 
-  if (openGreen) { // does the green LEDs need to be on?
-    digitalWrite(11, HIGH);
-    digitalWrite(10, HIGH);
-    digitalWrite(2, HIGH);
-  } else { // otherwise, turn them off.
-    digitalWrite(11, LOW);
-    digitalWrite(10, LOW);
-    digitalWrite(2, LOW);
-  }
+  // update the input strength variables by reading the joysticks
+  xL = arm.JoyStickL.read_x();
+  yL = arm.JoyStickL.read_y();
+  xR = arm.JoyStickR.read_x();
+  yR = arm.JoyStickR.read_y();
 
-  if (openBlue) { // do the blue LEDs need to be on?
-    digitalWrite(8, HIGH);
-    digitalWrite(12, HIGH);
-  } else { // otherwise, turn them off.
-    digitalWrite(8, LOW);
-    digitalWrite(12, LOW);
-  }
+  // limit each joystick input to one-axis at a time.
+  date_processing(&xL,&yL, 523, 507);
+  date_processing(&xL,&xR, 523, 514);
+  date_processing(&xR,&yL, 514, 507);
 
- 
+  // move the arm according to the input strength variables,
+  // and updates the LED booleans to their intended information
+  turnUD();
+  turnLR();
+  turnCO();
+
+  // send three boolean values to the slave.
+  // the slave must call Wire.read() in the exact same order.
+  Wire.beginTransmission(9); // transmit to device #9
+  Wire.write(isRed);
+  Wire.write(isGreen);
+  Wire.write(isBlue);
+  Wire.endTransmission(); // close transmission
 }
 
 
+////////////////////////////////////////////////////////////////////////////////
+
+// function handles the up and down control of the arm via joystick. 
+// additionally, it determines whether the respective (green) LEDs should be on.
+// turnUD is short for turn Up-Down
+
+void turnUD(void){
+
+  if ((xL<519) || (xL>529)) { // is there up-down movement of the joystick?
+
+    isGreen = true; // update isGreen: we want the green LEDs to be on.
+
+    //pushing harder on the joystick increases speed of the arm (up and down)
+    if(0<=xL && xL<=100){arm.up(10);return;}
+    if(900<xL && xL<=1024){arm.down(10);return;}
+    if(100<xL && xL<=200){arm.up(20);return;}
+    if(800<xL && xL<=900){arm.down(20);return;}
+    if(200<xL && xL<=300){arm.up(25);return;}      
+    if(700<xL && xL<=800){arm.down(25);return;}
+    if(300<xL && xL<=400){arm.up(30);return;}
+    if(600<xL && xL<=700){arm.down(30);return;}
+    if(400<xL && xL<=480){arm.up(35);return;}
+    if(540<xL && xL<=600){arm.down(35);return;}
+  } else { // no up-down movement of the joystick
+    isGreen = false; // update isGreen:  we want the green LEDs to be off.
+  }
+}
+
+
+////////////////////////////////////////////////////////////////////////////////
+
+// function handles the left and right control of the arm via joystick. 
+// additionally, it determines whether the respective (blue) LEDs should be on.
+// turnLR is short for turn Left-Right
+
+void turnLR(void){
+  if ((yL<500) || (yL>513)) { // is there left-right movement of the joystick?
+    
+    isBlue = true; // update isBlue: we want the blue LEDs to be on.
+ 
+    if(0<=yL && yL<=100){arm.right(0);return;}
+    if(900<yL && yL<=1024){arm.left(0);return;}  
+    if(100<yL && yL<=200){arm.right(5);return;}
+    if(800<yL && yL<=900){arm.left(5);return;}
+    if(200<yL && yL<=300){arm.right(10);return;}      // pushing harder on the joystick increases speed of the turn table (left and right)
+    if(700<yL && yL<=800){arm.left(10);return;}
+    if(300<yL && yL<=400){arm.right(15);return;}
+    if(600<yL && yL<=700){arm.left(15);return;}
+    if(400<yL && yL<=480){arm.right(20);return;}
+    if(540<yL && yL<=600){arm.left(20);return;}
+  } else { // no left-right movement of the joystick
+    isBlue = false; // update isBlue: we want the blue LEDs to be off.
+  }
+}
+
+////////////////////////////////////////////////////////////////////////////////
+
+// function handles the open and close control of the arm via joystick. 
+// additionally, it determines whether the respective (red) LEDs should be on.
+// turnCO is short for turn Close-Open
+
+void turnCO(void){
+
+  if((xR<510) || (xR>518)){
+
+    isRed = true; // update isRed: we want the red LEDs to be on.
+
+    if(0<=xR && xR<=100){arm.close(0);return;}
+    if(900<xR && xR<=1024){arm.open(0);return;}
+    if(100<xR && xR<=200){arm.close(5);return;}
+    if(800<xR && xR<=900){arm.open(5);return;}
+    if(200<xR && xR<=300){arm.close(10);return;}      // pushing harder on the joystick increases speed of the claw open and close
+    if(700<xR && xR<=800){arm.open(10);return;}
+    if(300<xR && xR<=400){arm.close(15);return;}
+    if(600<xR && xR<=700){arm.open(15);return;}
+    if(400<xR && xR<=480){arm.close(20);return;}
+    if(540<xR && xR<=600){arm.open(20);return;}
+  } else {
+    isRed = false; // update isRed: we want the red LEDs to be off.
+  }
+}
+
+////////////////////////////////////////////////////////////////////////////////
+
+// function ensures only one arm axis is being controlled at a time.
+// Whichever axis is being moved the most is given priority, and the other axis is reset to default pos.
+
+void date_processing(int *x, int *y, int x_avg, int y_avg){
+  if(abs(x_avg-*x)>abs(y_avg-*y)) 
+  {*y = y_avg;}
+  else 
+  {*x = x_avg;}
+}
 
 ```
 ```c++
