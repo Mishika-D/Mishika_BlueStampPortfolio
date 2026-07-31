@@ -228,6 +228,86 @@ void date_processing(int *x, int *y, int x_avg, int y_avg){
   {*x = x_avg;}
 }
 ```
+```c++
+// I2C Slave
+
+
+// include the required Wire library for I2C
+#include <Wire.h>`
+
+// define booleans, which are received via I2C.
+// these booleans will determine whether to turn on the respective color of LEDs
+bool openRed; 
+bool openGreen;
+bool openBlue;
+
+const int LED_PIN = 13;
+
+
+void setup () {
+  // define the LED pin as Output
+  pinMode (LED_PIN, OUTPUT);
+  // start the I2C Bus as Slave on address 9
+  Wire.begin(9);
+  Serial.begin(9600); 
+  // attach a function to trigger when something is received.
+  Wire.onReceive(receiveEvent);
+
+  // deifne pins
+  pinMode(11, OUTPUT); // green
+  pinMode(8, OUTPUT); // blue
+  pinMode(2, OUTPUT);  // green
+  pinMode(7, OUTPUT);  // red
+  pinMode(10, OUTPUT); // green
+  pinMode(12, OUTPUT); // blue
+  pinMode(3, OUTPUT); // red
+}
+
+// updates the RGB variables based on the received data.
+// assumes the triplet is sent in the same RGB format.
+void receiveEvent(int bytes) {
+  if (bytes >= 3) { // ensures we recieved 3 or more data bytes so there is enough to assign to the bools.
+    openRed = Wire.read();
+    openGreen = Wire.read();
+    openBlue = Wire.read();
+  }
+}
+
+void loop() {
+  // openRed is a bool, so it is already either true or false.
+  if (openRed) { // does the red LEDs need to be on?
+    digitalWrite(3, HIGH);
+    digitalWrite(7, HIGH);
+  } else { // otherwise, turn them off.
+    digitalWrite(3, LOW);
+    digitalWrite(7, LOW);
+  }
+
+  if (openGreen) { // does the green LEDs need to be on?
+    digitalWrite(11, HIGH);
+    digitalWrite(10, HIGH);
+    digitalWrite(2, HIGH);
+  } else { // otherwise, turn them off.
+    digitalWrite(11, LOW);
+    digitalWrite(10, LOW);
+    digitalWrite(2, LOW);
+  }
+
+  if (openBlue) { // do the blue LEDs need to be on?
+    digitalWrite(8, HIGH);
+    digitalWrite(12, HIGH);
+  } else { // otherwise, turn them off.
+    digitalWrite(8, LOW);
+    digitalWrite(12, LOW);
+  }
+
+ 
+}
+
+
+
+```
+
 
 # Starter Project 
 
