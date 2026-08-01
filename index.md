@@ -8,7 +8,12 @@ My vibrant light-up robotic arm glows different colors for each segment of my ro
 | Mishika D | Cupertino Highschool  | Bio/Biomedical Engineering | Incoming Freshman
 
 <img width="429" height="572" alt="Mishika D (3)" src="https://github.com/user-attachments/assets/eae78f6b-93c8-4616-90a1-24527dfa3412" />
-  
+
+
+# Demo
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/-RiEY3I1qWA?si=6qZp5qu1kOw35wU6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> 
+
 # Final Milestone
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ZKKGAXcAkhQ?si=GAgxgriwa98hc6Mu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
