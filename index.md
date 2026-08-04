@@ -22,9 +22,17 @@ My vibrant light-up robotic arm glows different colors for each segment of my ro
 
 # Description
 I completed my modifications for my third milestone. I successfully added LEDs to my robot, which turn on based on the robot's movement. I also designed a case to house my breadboards.
-In the beginning, I simulated how this modification would go using tinker cad. I initially wanted my LEDs to light up based on servo movement, so to mimic that I added a potentiometer (since there was no joystick) and servos along with the LEDs. I also wrote code based on the movement of the servos. During this process I learned how current flows through breadboards and applied it to my LEDs. Since this was just a simulation, I was able to test how LEDs would react when I changed their resistance and location on the breadboard. During this time I learned the difference between wiring circuits in series vs parallel.  
+
+# Before the Build
+In the beginning, I simulated how this modification would go using tinker cad. I initially wanted my LEDs to light up based on servo movement, so to mimic that I added a potentiometer (since there was no joystick) and servos along with the LEDs. I also wrote code based on the movement of the servos. During this process I learned how current flows through breadboards and applied it to my LEDs. Since this was just a simulation, I was able to test how LEDs would react when I changed their resistance and location on the breadboard. During this time I learned the difference between wiring in series vs parallel.  
+
+# Building my Modification
 When I started the actual build of my modification, I realized it would be much easier to have my code read the joystick position rather than the servo position. This is because my original code already reads the position of the joystick, which correlate to movement on my robot. Also, my previous code was written based on the potentiometer, which meant I had to change aspects of my code at some point, which would take time away from my build. Using my original code made debugging and troubleshooting simpler since I knew how it would react alongside my robot. I also changed some of the wiring when attaching my LEDs to my breadboard. For example, due to the amount of wires, I changed the location of some of the LEDs for convenience. Learning how power flows through breadboards was really important too, especially since the top half of the breadboard does not automatically get power even when the bottom half does. 
+
+# I2C
 Using I2C, I got my original nano board to communicate with an additional nano esp 32, which currently drives my LEDs. I2C is a common communication protocol that helps transmit data between different devices. I chose to implement I2C because I can easily add more modifications in the future since this mechanism allows for multiple "master" and "slave" devices. Not to mention, this method of communication does not require many wires which adds to it's usefulness. My "master" board was my nano located on my robot. This microcontroller contained code signaling my robot to move and told the LEDs when to light up. My "slave" board was my nano esp 32, which lit up my LEDs.
+
+# Programming 
 Most of the challenges I faced lied in the program of the robot. Like I mentioned before, my LEDs would blink when they were not supposed to. While fixing this issue I learned how to write debug code and use the serial monitor. This was incredibly helpful since most of the issues I faced weren't directly written in the code. By writing debug code, I was able to read outputs from the serial monitor and fix my issues. 
 
 
