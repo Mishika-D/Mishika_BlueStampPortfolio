@@ -68,6 +68,9 @@ I overcame many challenges during this assembly. For example, while building my 
 For my next milestone, I am aiming to complete my modifications. My main modification is to add LEDs that light up based on the movement of the robot. If I have extra time, I will CAD a case for my controller using Onshape. 
 
 # Schematics + CAD
+
+DISCLAIMER: My LED schematics were a rough draft and my final program may not match the original setup found in the design. 
+
 <img width="822" height="640" alt="Screenshot 2026-07-29 142229" src="https://github.com/user-attachments/assets/dfc0fee4-81ae-4fa1-9e74-b42b6e405eaa" />
 <img width="824" height="628" alt="Screenshot 2026-07-29 142514" src="https://github.com/user-attachments/assets/a4f8c52b-b001-40f2-81f6-42cdf8c29703" />
 
