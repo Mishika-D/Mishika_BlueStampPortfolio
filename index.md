@@ -347,5 +347,3 @@ My starter project was a retro arcade console. I mainly developed my soldering s
 | Isolation pillars (isolation) | 4 | spaces out acrylic plate from board |
 | Acrylic main panels | 2 | protects components |
 | Acrylic side panels | 4 | protects components + joins main panels |
-
-# Engineering Notebook
